@@ -9,6 +9,7 @@ add_theme_support('post-thumbnails');
 add_action('wp_enqueue_scripts', function(){
 	
 	wp_enqueue_style('styles-theme', ASSETS . 'app.css');
+	wp_enqueue_style('fonts', "//fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Open+Sans:wght@300;400;600&display=swap");
 	wp_enqueue_script('scripts-theme', ASSETS . 'app.js', [], 1, true );
 
 	wp_deregister_script( 'jquery-core' );
