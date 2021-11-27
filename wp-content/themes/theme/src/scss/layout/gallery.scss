@@ -1,32 +1,125 @@
 .gallery {
+  width: 100%;
+  height: 100%;
+  padding: 0 5rem 0 5rem;
+  margin-bottom: 10.5rem;
+
+  // .gallery__container
+
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
 
   // .gallery__title
 
   &__title {
+    font-family: 'Libre Caslon';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4rem;
+    line-height: 4.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #252736;
+    margin-bottom: 3.3rem;
   }
 
   // .gallery__row
 
   &__row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   // .gallery__up
 
   &__up {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    height: 58.4rem;
+    div{
+      width: 33.33%;
+      height: 100%;
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    div{
+      height: 49%;
+      width: 100%;
+    }
+    img{
+      object-fit: cover;
+    }
   }
 
   // .gallery__middlle
 
   &__middlle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 27.8rem;
+    margin-bottom: 3rem;
+    div{
+      width: 33.3%;
+    }
+    img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 
   // .gallery__bottom
 
   &__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 58.4rem;
+    margin-bottom: 4.5rem;
+    div{
+      width: 33.3%;
+    }
+    img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 
   // .gallery__btn
 
   &__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    width: 19.8rem;
+    height: 6rem;
+    background: #2659F6;
+    cursor: pointer;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #FFFFFF;
   }
 }
