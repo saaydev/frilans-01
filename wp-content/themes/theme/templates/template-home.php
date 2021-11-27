@@ -209,6 +209,7 @@
 				<p class="blog-btn">Leggi tutte le notizie</p>
 			</div>
 		</div>
+		<?php get_template_part("components/form") ?>
 		<div class="form">
 			<div class="container">
 			    <div class="form-container">    
@@ -228,6 +229,7 @@
 			    </div>
 			</div>
 		</div>
+
 	</div>
 <?php 
     get_footer(); 
