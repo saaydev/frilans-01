@@ -12,7 +12,7 @@
 <body>
 <div id="app">
 <div class="color">
-    <div class="title">
+    <?= is_front_page() ? '<div class="title">' : '' ?>
         <div class="container">
             <div class="header-top">
                 <div class="header-contacts">
@@ -63,5 +63,5 @@
             <?php endif; ?>
 
         </div>
-    </div>
+    <?= is_front_page() ? '</div>' : '' ?>
 </div>

@@ -19,48 +19,9 @@
 					</div>
 				</div>
 		</div>
-		<div class="story">
-			<div class="container">
-				<h3 class="story-title">Storia del successo</h3>
-			</div>
-			<div class="story-blocks">
-				<div id="story-item1" class="story-item">
-					<h3>2011</h3>
-					<h5>Laurea <br>in giurisprudenza</h3>
-					<p>Università degli Studi di Milano</p>
-				</div>
-				<div id="story-item2"class="story-item">
-					<h3>2012</h3>
-					<h5>Associazione</h3>
-					<p>New York, Mosca</p>
-				</div>
-				<div id="story-item3" class="story-item">
-					<h3>2015</h3>
-					<h5>Licenza italiana</h3>
-					<p></p>
-				</div>
-				<div id="story-item4" class="story-item">
-					<h3>2017</h3>
-					<h5>Ha fondato un'azienda con partner a Milano</h3>
-					<p>«LA&P Legal & Tax Concel»</p>
-				</div>
-				<div id="story-item5" class="story-item">
-					<h3>2018</h3>
-					<h5>Co-fondatore di uno studio legale</h3>
-					<p>In cui vengono serviti la maggior parte degli uomini d’affari di lingua russa di Milano</p>
-				</div>
-				<div id="story-item6" class="story-item">
-					<h3>2020</h3>
-					<h5>Ha fondato un'azienda con partner a Milano</h3>
-					<p>«LA&P Legal & Tax Concel»</p>
-				</div>
-				<div id="story-item7" class="story-item">
-					<h3>2021</h3>
-					<h5>Co-fondatore di uno studio legale</h3>
-					<p>In cui vengono serviti la maggior parte degli uomini d’affari di lingua russa di Milano</p>
-				</div>
-			</div>
-		</div>		
+		
+		<?php get_template_part("components/story"); ?>
+		
 		<div class="service">
 			<div class="container">
 				<div class="service-container">
@@ -210,25 +171,7 @@
 			</div>
 		</div>
 		<?php get_template_part("components/form") ?>
-		<div class="form">
-			<div class="container">
-			    <div class="form-container">    
-			    	<div class="form-column">
-			            <h3 class="form-title">Avete domande?</h3>
-                        <div class="form-text-container">
-			                <p class="form-text">Hai bisogno di una consulenza professionale?</p>
-			                <p class="form-text">Lascia una richiesta e ti richiamerò a breve</p>
-                        </div>
-			            <input class="input-standart"type="text" placeholder="Il tuo nome*">
-			            <input class="input-standart"type="text" placeholder="La tua email">
-			            <input class="input-standart"type="text" placeholder="Il tuo numero di telefono*">
-			            <textarea class="input-textaerea"type="text" placeholder="Il tuo commento">Il tuo commento</textarea>
-			            <input class="form-submit"type="submit" value="Lascia una richiesta di consulenza">
-			        </div>
-			        <img src="<?= get_template_directory_uri() . "/assets/img/" ?>form/3.png" alt="" class="form-column-2">
-			    </div>
-			</div>
-		</div>
+		
 
 	</div>
 <?php 
