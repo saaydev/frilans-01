@@ -1,0 +1,58 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.title {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.header-top {
+  /*display: flex;*/
+  max-width: 1118px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+.header-top li {
+  list-style: none;
+}
+.header-top .header-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: blue;
+  max-width: 1110px;
+  width: 100%;
+}
+.header-top .header-contacts li:before {
+  content: "";
+  /* для отображения контента в данном солучаи - background: url(./imeg/jVfPr0P4gm0.jpg); */
+  display: inline-block;
+  /* тоже необходим для отображения нашего изображения */
+  width: 12px;
+  height: 16.5px;
+}
+.header-top .header-contacts #map {
+  background: url("img/header/icon/map.png") no-repeat;
+  /* путь к нашему изображению */
+  background-size: contain;
+  /* для отображения изображения в указанных нами размерами width: 150px; height: 150px; */
+}
+.header-top .header-contacts #clock {
+  list-style-image: url("img/header/icon/clock.png");
+}
+.header-top .header-contacts #mail {
+  list-style-image: url("img/header/icon/post.png");
+}
+.header-top .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
