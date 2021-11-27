@@ -2,7 +2,7 @@
 define("ASSETS", get_template_directory_uri() . "/assets/");
 define("IMG", ASSETS . "/img/");
 
-// add_filter('show_admin_bar', '__return_false'); # отключить админ панель
+add_filter('show_admin_bar', '__return_false'); # отключить админ панель
 
 add_theme_support('post-thumbnails');
 

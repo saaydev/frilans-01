@@ -15292,8 +15292,8 @@ window.Qs = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\79842\Desktop\southerner\src\js\app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\79842\Desktop\southerner\src\scss\app.scss */"./src/scss/app.scss");
+__webpack_require__(/*! C:\openserver\domains\levak\wp-content\themes\theme\src\js\app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! C:\openserver\domains\levak\wp-content\themes\theme\src\scss\app.scss */"./src/scss/app.scss");
 
 
 /***/ })
