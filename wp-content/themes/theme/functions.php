@@ -1,4 +1,8 @@
 <?php
+include_once "inc/post_type.php";
+include_once "inc/ajax.php";
+include_once "inc/customizer.php";
+
 define("ASSETS", get_template_directory_uri() . "/assets/");
 define("IMG", ASSETS . "/img/");
 
@@ -28,6 +32,12 @@ add_action('after_setup_theme', function(){
 	]);
 });
 
-include_once "inc/post_type.php";
-include_once "inc/ajax.php";
-include_once "inc/customizer.php";
+function custom_excerpt_length( $length ) {
+	return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+

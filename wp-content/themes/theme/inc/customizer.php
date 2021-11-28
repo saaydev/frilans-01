@@ -10,7 +10,8 @@ add_action('customize_register', function(WP_Customize_Manager $wp_customize){
         ]
     );
     $items = [
-        "Телефон"   => "phone",
+        "Телефон"   => "tel",
+        "E-mail"    => "email",
         "Адрес"     => "address",
     ];
     foreach($items as $key => $item){

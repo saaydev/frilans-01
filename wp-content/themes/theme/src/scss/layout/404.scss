@@ -1,0 +1,62 @@
+.page404{
+    position: relative;
+    background: #252736;
+    height: 100vh;
+    overflow-x: hidden;
+    img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    .line{
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        top: 40.5%;
+        background: #2659F6;
+        &:nth-of-type(1){
+            left: 0;
+        }
+        &:nth-of-type(2){
+            right: 0;
+        }
+    }
+    .center{
+        height: 100%;
+        width: 100%;
+    }
+    &-text{
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-auto-rows: max-content;
+        gap: 2rem;
+        color: #FFFFFF;
+        p{
+            &:nth-of-type(1){
+                font-family: Libre Caslon Display;
+                font-size: 5.5rem;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                position: relative;
+            }
+            &:nth-of-type(2){
+                font-weight: 300;
+                font-size: 3rem;
+            }
+            &:nth-of-type(3){
+                font-weight: 300;
+                font-size: 2rem;
+                color: #FFFFFF;
+                margin-bottom: .8rem;
+            }
+            
+        }
+        a{
+            margin: 0;
+        }
+    }
+}

@@ -1,65 +1,22 @@
-<?php 
-    /*
-    *  Template name: Gallery
-    */
+<?php
+    // Template name: Gallery
     get_header();
 ?>
+    <div class="page container">
+        <h1><?php the_title() ?></h1>
+            <div class="gallery">
 
-<div class="gallery">
+                <?php if(CFS()->get("items")) foreach(CFS()->get("items") as $key => $item) : ?>
+                    <div class="gallery-item <?= $key < 10  ? "" : "hidden" ?>">
+                        <img src="<?= $item["item"] ?>" alt="">
+                    </div>
+                <?php endforeach ?>
 
-  <div class="gallery__container">
-
-    <h2 class="gallery__title">Gallery</h2>
-
-    <ul class="gallery__row">
-
-    <li class="gallery__up">
-      <div class="gallery__column">
-        <div>
-          <img src="<?php echo IMG . "Rectangle8.png"?>" alt="">
+            </div>
+        <div class="center">
+            <button class="btn gallery-show">Mostra di più</button>
         </div>
-        <div>
-          <img src="<?php echo IMG . "Rectangle8.png"?>" alt="">
-        </div>
-      </div>
-      <div>
-        <img src="<?php echo IMG . "Rectangle9.png"?>" alt="">
-      </div>
-      <div>
-        <img src="<?php echo IMG . "Rectangle9.png"?>" alt="">
-      </div>
-    </li>
-    
-    <li class="gallery__middlle">
-      <div>
-        <img src="<?php echo IMG . "Rectangle10.png"?>" alt="">
-      </div>
-      <div>
-        <img src="<?php echo IMG . "Rectangle10.png"?>" alt="">
-      </div>
-      <div>
-        <img src="<?php echo IMG . "Rectangle10.png"?>" alt="">
-      </div>
-    </li>
-
-    <li class="gallery__bottom">
-      <div>
-        <img src="<?php echo IMG . "Rectangle17.png"?>" alt="">
-      </div>
-      <div>
-        <img src="<?php echo IMG . "Rectangle17.png"?>" alt="">
-      </div>
-      <div>
-        <img src="<?php echo IMG . "Rectangle17.png"?>" alt="">
-      </div>
-    </li>
-    </ul>
-    <button class="gallery__btn">Trololo</button>
-
-  </div>
-
-</div>
-
+    </div>
 <?php 
     get_footer(); 
 ?>

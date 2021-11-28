@@ -2,9 +2,12 @@
 
 @import "./layout/components/header.scss";
 @import "./layout/components/footer.scss";
+@import "./layout/components/modals.scss";
 
-@import "./layout/home.scss";
-@import "./layout/articolo.scss";
-@import "./layout/about.scss";
+@import "./layout/news.scss";
+@import "./layout/news-single.scss";
 @import "./layout/gallery.scss";
+@import "./layout/404.scss";
 @import "./layout/contacts.scss";
+@import "./layout/home.scss";
+@import "./layout/about.scss";

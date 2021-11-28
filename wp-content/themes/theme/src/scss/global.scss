@@ -3,6 +3,7 @@
 $grid-breakpoints-lg: 1280px;
 $grid-breakpoints-md: 768px;
 $breakpoints-full-hd: 1980px;
+$colorm: #252736;
 
 html {
     font-size: 0.39vw;
@@ -30,8 +31,10 @@ body {
     line-height: normal;
     font-family: 'Open Sans', sans-serif;
     position: relative;
-    background: #252736;
     overflow-x: hidden;
+}
+body.black{
+    background: #252736;
 }
 
 .container {
@@ -46,7 +49,6 @@ body {
         font-weight: normal;
         font-size: 2.2rem;
         line-height: 3.6rem;
-        color: #FFFFFF;
     }
     .alignright{
         float: right;
@@ -54,6 +56,9 @@ body {
     .alignleft{
         float: left;
     }
+}
+.content.black{
+    color: #252736;
 }
 .btn{
     background: #2962FF;
@@ -64,6 +69,10 @@ body {
     cursor: pointer;
     margin: 2.4rem 0;
     width: max-content;
+    height: max-content;
+}
+.btn.no-marg{
+    margin: 0;
 }
 .title-h2{
     font-family: Libre Caslon Display;
@@ -85,7 +94,45 @@ body {
 .title-h2.large{
     font-size: 4rem;
 }
+
+.title{
+    font-family: Libre Caslon Display;
+    font-size: 4rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+.title.black{
+    color: #252736;
+}
+.text-center{
+    text-align: center;
+}
+
 .center{
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.page{
+    padding: 10rem 0;
+    h1{
+        margin-bottom: 3.3rem;
+        font-family: Libre Caslon Display;
+        font-size: 4rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #252736;
+    }
+    .btn{
+        margin: 4.5rem 0 0 0;
+    }
+}
+.page.no-padd{
+    padding-bottom: 0;
+}
+body.black .page h1{
+    color: #fff;
 }

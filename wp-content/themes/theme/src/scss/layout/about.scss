@@ -146,6 +146,11 @@
             .bottom{
                 margin-top: 9.6rem;
             }
+            &-items{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 3rem;
+            }
         }
     }
 }

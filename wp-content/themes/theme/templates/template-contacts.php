@@ -4,10 +4,9 @@
     */
     get_header();
 ?>
+<div class="page container no-padd">
+  <h1><?php the_title() ?></h1>
   <div class="contacts">
-
-    <h2 class="contacts__title">Contatti</h2>
-    
     <ul class="contacts__info">
       <li>
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,7 +15,7 @@
       </svg>
 
       <span>
-        lunedì - venerdì dalle 09:00 alle 20:00
+        lunedì - venerdì dalle 09:00 <br>alle 20:00
       </span>
       </li>
       
@@ -26,7 +25,7 @@
       </svg>
 
       <span>
-        lunedì - venerdì dalle 09:00 alle 20:00
+      +390280886791
       </span>
       </li>
       
@@ -36,7 +35,7 @@
       </svg>
 
       <span>
-        lunedì - venerdì dalle 09:00 alle 20:00
+      dp@studiolap.it
       </span>
       </li>
       
@@ -46,41 +45,20 @@
       </svg>
 
       <span>
-        lunedì - venerdì dalle 09:00 alle 20:00
+      Via Borromei, 2 20123, Milano Italia
       </span>
       </li>
     </ul>
 
-    <div class="contacts__row">
-      <div class="contacts__map" style="background-image:url('<?php echo IMG . "Rectangle18.png"?>');">
 
-      </div>
-      <div class="contacts__about" style="background-image: url('<?php echo IMG . "1313.png"?>');">
-        <div class="contacts__wrap">
-          <form action="" class="contacts__form">
-
-            <p>Avete domande?</p>
-
-            <span>Hai bisogno di una consulenza professionale?</span>
-
-            <span>Lascia una richiesta e ti richiamerò a breve</span>
-
-            <input type="text">
-
-            <input type="text">
-
-            <input type="text">
-
-            <textarea name="" id="" cols="30" rows="10">
-
-            </textarea>
-
-            <button>Lascia una richiesta di consulenza</button>
-          </form>
-        </div>
-      </div>
-    </div>
   </div>
+ 
+</div>
+<div class="contacts__row">
+      <div class="contacts__map" style="background-image:url('<?php echo IMG . "map.png"?>');"></div>
+    </div>
+<?php get_template_part("components/form"); ?>
+
 <?php 
     get_footer(); 
 ?>
