@@ -5,6 +5,20 @@
     get_header();
 ?>
 <div class="home">
+	<div class="home-preview">
+		<div class="container">
+			<div class="home-preview-item">
+				<h1>Davide Poberejskii</h1>
+				<p>
+					<svg width="35" height="3" viewBox="0 0 35 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<line y1="1.5" x2="35" y2="1.5" stroke="#2962FF" stroke-width="3"/>
+					</svg>
+					Avvocato di lingua russa in Italia
+				</p>
+			</div>
+			<img src="<?= IMG . "header/title-bg.png" ?>" alt="">
+		</div>
+	</div>
 	<div class="home-about container">
 		<div class="line"></div>
 		<img src="<?= get_template_directory_uri() . "/assets/img/" ?>about/about-main.png" alt="" class="about-img">

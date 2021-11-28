@@ -16,6 +16,45 @@ body.black .header{
 }
 
 .home{
+	&-preview{
+		height: 93rem;
+		background: #252736;
+		backdrop-filter: blur(9px);
+		.container{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			justify-content: center;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+		&-item{
+			padding-left: 12rem;
+			h1{
+				font-family: Libre Caslon Display;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 12rem;
+				color: #fff;
+				margin-bottom: 5rem;
+			}
+			p{
+				font-weight: 600;
+				font-size: 2.4rem;
+				letter-spacing: 0.04em;
+				color: #FFFFFF;
+				display: flex;
+				align-items: center;
+				gap: 3rem;
+			}
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 	&-about{
 		display: grid;
 		grid-template-columns: 54rem 1fr;
