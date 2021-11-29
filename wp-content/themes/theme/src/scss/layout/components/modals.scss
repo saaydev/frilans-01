@@ -9,12 +9,18 @@
     left: 0;
     top: 0;
     z-index: 10;
+    @include mobile{
+        padding: 1.5rem;
+    }
     &-window{
         background: #252736;
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
         padding-top: 10.8rem;
         padding: 10.8rem 8rem 4.8rem;
         position: relative;
+        @include mobile{
+            padding: 7rem 1.5rem;
+        }
         .close{
             position: absolute;
             right: 2.5rem;
@@ -36,6 +42,10 @@
             text-transform: uppercase;
             color: #FFFFFF;
             margin-bottom: 1.8rem;
+            @include mobile{
+                font-size: 2rem;
+                margin-bottom: 2.5rem;
+            }
         }
         p{
             font-weight: 300;
@@ -43,6 +53,10 @@
             text-align: center;
             color: #FFFFFF;
             margin-bottom: 1.5rem;
+            @include mobile{
+                font-size: 1.6rem;
+                margin-bottom: 3.5rem;
+            }
         }
         input{
             width: 100%;
@@ -66,6 +80,9 @@
                 margin: 0;
                 margin-top: .3rem;
                 justify-self: center;
+                @include mobile{
+                    width: 100%;
+                }
             }
             span{
                 font-family: Open Sans;
@@ -73,6 +90,9 @@
                 font-size: 1.2rem;
                 text-align: center;
                 color: #FFFFFF;
+                @include mobile{
+                    margin-top: 3rem;
+                }
             }
         }
     }
@@ -84,6 +104,13 @@
         h2{
             text-align: left;
             font-size: 2.7rem;
+            @include mobile{
+                font-size: 2rem;
+                text-align: center;
+                max-width: 31.2rem;
+                margin: 0 auto;
+                margin-bottom: 2.5rem;
+            }
         }
         p{
             text-align: left;
@@ -101,8 +128,8 @@
                     background: #FFFFFF;
                     color: #2659F6;
                 }
-                &:nth-of-type(2){
-                    
+                @include mobile{
+                    width: 100%;
                 }
             }
         }

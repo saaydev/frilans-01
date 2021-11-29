@@ -10,8 +10,8 @@
         </button>
         <h2>Vuoi iscriverti a una consulenza?</h2>
         <p>Compila il form e ti richiamerò a breve</p>
-        <form action="" class="form-1">
-            
+        <form action="" class="form-1" id="formmodal">
+            <input type="hidden" name="action" value="sendform">
             <input type="text" name="name" placeholder="Il tuo nome*" required>
             <input type="email" name="email" placeholder="La tua email">
             <input type="tel" name="tel" placeholder="Il tuo numero di telefono*" required>

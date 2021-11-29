@@ -1,18 +1,7 @@
-button:focus {
-  outline: none;
-}
-
 .wrapper{
 	width: 1920px;
 	overflow: hidden;
 	margin: 0;
-}
-
-body.white .header{
-	color: #252736;
-}
-body.black .header{
-	color: #fff;
 }
 
 .home{
@@ -20,6 +9,9 @@ body.black .header{
 		height: 93rem;
 		background: #252736;
 		backdrop-filter: blur(9px);
+		@include mobile{
+			height: auto;
+		}
 		.container{
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -28,9 +20,22 @@ body.black .header{
 			align-items: center;
 			justify-content: center;
 			height: 100%;
+			@include tablet{
+				align-items: start;
+			}
+			@include mobile{
+				grid-template-columns: 100%;
+				gap: 0;
+			}
 		}
 		&-item{
-			padding-left: 12rem;
+			position: relative;
+			z-index: 2;
+			padding-left: 8rem;
+			@include tablet{
+				padding-top: 17rem;
+				padding-left: 0;
+			}
 			h1{
 				font-family: Libre Caslon Display;
 				font-style: normal;
@@ -38,6 +43,13 @@ body.black .header{
 				font-size: 12rem;
 				color: #fff;
 				margin-bottom: 5rem;
+				@include tablet{
+					font-size: 10rem;
+				}
+				@include mobile{
+					font-size: 8rem;
+					margin-bottom: 2rem;
+				}
 			}
 			p{
 				font-weight: 600;
@@ -47,12 +59,31 @@ body.black .header{
 				display: flex;
 				align-items: center;
 				gap: 3rem;
+				@include tablet{
+					font-size: 2.2rem;
+				}
+				@include mobile{
+					margin-bottom: 0;
+				}
 			}
 		}
-		img{
+		img.preview-img-full{
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			@include mobile{
+				display: none;
+			}
+		}
+		img.preview-img-mobile{
+			display: none;
+			@include mobile{
+				display: block;
+			}
 		}
 	}
 	&-about{
@@ -60,6 +91,14 @@ body.black .header{
 		grid-template-columns: 54rem 1fr;
 		gap: 15rem;
 		position: relative;
+		@include tablet{
+			gap: 11rem;
+			grid-template-columns: 36.7rem 1fr;
+		}
+		@include mobile{
+			grid-template-columns: 100%;
+			gap: 4rem;
+		}
 		.line{
 			position: absolute;
 			width: 150%;
@@ -70,6 +109,9 @@ body.black .header{
 			transform: translate(-50%, 0);
 			background: #fff;
 			transform: rotate(5deg) translate(-50%, 0);
+			@include tablet{
+				top: -2.5rem;
+			}
 		}
 		img{
 			width: 100%;
@@ -77,11 +119,21 @@ body.black .header{
 			position: relative;
 			z-index: 2;
 			margin-top: -20rem;
+			@include tablet{
+				margin-top: -13rem;
+			}
+			@include mobile{
+				margin-top: 0;
+				grid-row: 2/3;
+			}
 		}
 		.content{
 			padding-top: 3rem;
 			position: relative;
 			z-index: 2;
+			@include mobile{
+				padding-top: 0;
+			}
 			h2{
 				margin-bottom: 4.3rem;
 				font-family: Libre Caslon Display;
@@ -91,26 +143,54 @@ body.black .header{
 				letter-spacing: 0.04em;
 				text-transform: uppercase;
 				color: #252736;
+				@include mobile{
+					font-size: 3rem;
+					margin-bottom: 2rem;
+				}
 			}
 			.btn{
 				display: block;
 				margin-top: 5.3rem;
+				@include mobile{
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
 	&-story{
 		margin-bottom: 9rem;
+		@include tablet{
+			overflow: auto;
+		}
+		@include mobile{
+			margin-bottom: 6rem;
+		}
 	}
 	&-services{
 		background: $colorm;
 		padding: 11rem 0 20rem;
 		position: relative;
+		@include tablet{
+			padding: 7rem 0 17rem;
+		}
+		@include mobile{
+			padding: 5rem 0 12.6rem;
+		}
 		&-top{
 			display: grid;
 			grid-template-columns: 53rem 1fr;
 			gap: 5.3rem;
 			grid-auto-rows: max-content;
 			margin-bottom: 9rem;
+			@include tablet{
+				grid-template-columns: 28.6rem 1fr;
+				gap: 8rem;
+			}
+			@include mobile{
+				grid-template-columns: 100%;
+				gap: 3rem;
+				margin-bottom: 3rem;
+			}
 			.left{
 				h2{
 					margin-bottom: 3rem;
@@ -133,6 +213,11 @@ body.black .header{
 			grid-auto-rows: max-content;
 			gap: 3rem;
 			margin-bottom: 9rem;
+			@include mobile{
+				grid-template-columns: 1fr 1fr;
+				gap: 2.6rem 3.3rem;
+				margin-bottom: 5.8rem;
+			}
 		}
 		&-item{
 			position: relative;
@@ -146,11 +231,17 @@ body.black .header{
 			transition: .5s;
 			padding: 2rem 3rem;
 			height: max-content;
+			@include mobile{
+				padding: 1.3rem;
+			}
 			h2{
 				font-family: Libre Caslon Display;
 				font-size: 1.8rem;
 				letter-spacing: 0.04em;
 				text-transform: uppercase;
+				@include mobile{
+					font-size: 1.6rem;
+				}
 			}
 			p{
 				font-family: Open Sans;
@@ -180,6 +271,11 @@ body.black .header{
 				opacity: 0;
 				transition: .2s;
 				transform: scale(.95);
+				@include mobile{
+					width: 100%;
+					padding: 1rem;
+					left: 0;
+				}
 				h2{
 					margin-bottom: 2rem;
 				}
@@ -207,31 +303,50 @@ body.black .header{
 			width: 120%;
 			height: 23rem;
 			background: white;
+			@include mobile{
+				bottom: -11%;
+			}
 		}
+		
 	}
 	&-news{
 		padding-top: 10rem;
+		@include mobile{
+			padding-top: 6rem;
+		}
 		&-items{
 			margin-top: 5rem;
 			margin-bottom: 5.6rem;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 3rem;
+			@include mobile{
+				grid-template-columns: 100%;
+				gap: 4rem;
+				margin-top: 4rem;
+				margin-bottom: 5rem;
+			}
 		}
 	}
 }
 .story{
 	margin-top: 7.3rem;
+	@include mobile{
+		margin-top: 4.5rem;
+	}
 }
 .story-title{
 	font-family: Libre Caslon Display;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 30px;
-	line-height: 37px;
+	font-size: 3rem;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #252736;
+	@include mobile{
+		font-size: 2.4rem;
+		margin-bottom: 3rem;
+	}
 }
 
 .story-blocks{
@@ -277,81 +392,99 @@ body.black .header{
 		}
 	}
 }
+
 .review{
 	padding-top: 5rem;
 	position: relative;
 }
+
 .review-container-title{
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 29rem 1fr;
+	gap: 28.7rem;
+	@include tablet{
+		gap: 10rem;
+	}
+	@include mobile{
+		grid-template-columns: 100%;
+		gap: 3.5rem;
+	}
 	.review-title{
 		font-family: Libre Caslon Display;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 40px;
-		line-height: 49px;
+		font-size: 4rem;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		color: #252736;
-		max-width: 281px;
-		margin: 0 0 0 2px;
+		@include mobile{
+			font-size: 3rem;
+		}
 	}
-}
-
-
-.reviews-title-info{
-	display: flex;
-	justify-content: space-between;
-	margin-right: 9.8%;
-	width: 100%;
-	max-width: 642px;
-	margin-top: -1px;
-}
-.info-item{
-	h3{
-		font-family: Libre Caslon Display;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 55px;
-		line-height: 68px;
-		text-transform: uppercase;
-		color: #2962FF;
+	.reviews-title-info{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 64.2rem;
+		@include mobile{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2.5rem 0;
+		}
+		.info-item{
+			@include mobile{
+				width: max-content;
+			}
+			h3{
+				font-family: Libre Caslon Display;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 5.5rem;
+				text-transform: uppercase;
+				color: #2962FF;
+			}
+			p{
+				margin-top: 1.1rem;
+				font-family: Open Sans;
+				font-style: normal;
+				font-weight: 300;
+				font-size: 1.8rem;
+				color: #252736;
+				max-width: 180px;
+			}
+		}
+		
 	}
-	p{
-		margin-top: 11px;
-		font-family: Open Sans;
-		font-style: normal;
-		font-weight: 300;
-		font-size: 18px;
-		line-height: 25px;
-		color: #252736;
-		max-width: 180px;
-	}
+	
 }
 
 .reviews-container{
 	display: flex;
-	margin-top: 70px;
+	margin-top: 7rem;
 	justify-content: space-between;
+	gap: 3rem;
+	@include mobile{
+		margin-top: 5rem;
+		display: grid;
+		grid-auto-rows: max-content;
+	}
 	.review-item{
-		height: 243px;
 		width: 100%;
-		width: 427px;
+		width: 100%;
+		border: 1px solid rgba(38, 38, 38, 0.08);
+		padding: 3rem;
 	}
 }
 
 .stars{
-	margin-top: 11px;
-	margin-left: 27px;
+	position: relative;
 	&:before{
 		content: '';
-		display: block;
-		position: relative;
-		top: 24px;
-		left: -29px;
-		width: 3px;
-		height: 30px;
-
+		position: absolute;
+		top: 0rem;
+		left: -3rem;
+		width: .4rem;
+		height: 100%;
 		background-color: #2962FF;
 	}
 	img{
@@ -363,35 +496,33 @@ body.black .header{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 16px;
-	line-height: 22px;
-
+	font-size: 1.6rem;
 	color: #252736;
-
-	max-width: 367px;
-	margin: 12px auto 0;
+	max-width: 36.7rem;
+	margin: 1.2rem auto 0;
 }
 .author{
 	display: flex;
 	justify-content: space-between;
-	max-width: 367px;
-	margin: 15px auto 0;
+	margin-top: 1.5rem;
 	align-items: center;
+	@include tablet{
+		display: block;
+	}
 	.name{
 		display: flex;
 		align-items: center;
+		@include tablet{
+			margin-bottom: 2rem;
+		}
 		img{
-			width: 60px;
-			height: 60px;
+			width: 6rem;
+			height: 6rem;
 		}
 		p{
-			font-family: Open Sans;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 18px;
-			line-height: 30px;
+			font-size: 1.8rem;
 			color: #252736;
-			margin-left: 12px;
+			margin-left: 1.2rem;
 		}
 	}
 }
@@ -399,21 +530,30 @@ body.black .header{
 .btns-review{
 	display: flex;
 	justify-content: space-between;
-	margin: 42px auto 0;
+	margin: 4.2rem auto 0;
 	text-align: center;
 	width: 100%;
-	max-width: 550px;
-
+	max-width: 55rem; 
+	@include mobile{
+		margin: 0;
+		margin-top: 3rem;
+		max-width: unset;
+		flex-direction: column;
+		gap: 2rem;
+	}
 	.btn1,
 	.btn2{
 		font-family: Open Sans;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 20px;
-		line-height: 30px;
+		font-size: 2rem;
 		text-align: center;
-		width: 260px;
-		padding: 14px 0;
+		max-width: 26rem;
+		padding: 1.4rem 0;
+		width: 100%;
+		@include mobile{
+			max-width: unset;
+		}
 	}
 	.btn1{
 		color: #2962FF;
@@ -430,25 +570,34 @@ body.black .header{
 	font-family: Open Sans;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 14px;
-	line-height: 24px;
+	font-size: 1.4rem;
+	line-height: 2.4rem;
 	color: #252736;
 	opacity: 0.5;
 }
 
 .review{
 	.down-p{
-		margin-top: 63px;
+		margin-top: 6.3rem;
+		@include mobile{
+			margin-top: 5rem;
+		}
 	}
 }
 
 .gallary{
 	background-color: #252736;
-	margin-top: 56px;
-	padding-bottom: 85px;
+	margin-top: 5.6rem;
+	padding-bottom: 8.5rem;
 	padding-top: 9.5rem;
+	@include mobile{
+		padding: 5rem 0;
+	}
 	.title{
 		padding-bottom: 8rem;
+		@include mobile{
+			padding-bottom: 4.2rem;
+		}
 	}
 	.gallary-container{
 		display: grid;
@@ -456,6 +605,11 @@ body.black .header{
 		grid-template-rows: max-content;
 		grid-template-areas: "_1 _3 _4" "_2 _3 _4";
 		gap: 3rem;
+		@include mobile{
+			gap: 2rem;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: "_1 _3" "_2 _3";
+		}
 		img{
 			width: 100%;
 			height: 100%;
@@ -471,124 +625,119 @@ body.black .header{
 			}
 			&:nth-of-type(4){
 				grid-area: _4;
+				@include mobile{
+					display: none;
+				}
 			}
 		}
 	}
-	.btn-gallary{
-		font-family: Open Sans;
-		font-size: 20px;
-		line-height: 30px;
-		text-align: center;
-
-		background-color: #2659F6;
-		color: #FFFFFF;
-
-		max-width: 179px;
-
-		margin: -4px auto 0;
-		padding: 17px 0 15px;
-	}
-}
-
-.form-container{
-	display: flex;
-	justify-content: flex-end;
-}
-
-.form-column{
-	max-width: 427px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	max-height: 668px;
-
-	margin-top: 14.3%;
-	margin-right: 4%;
-}
-
-
-.form-title{
-	font-family: Libre Caslon Display;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 40px;
-	line-height: 49px;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-
-	color: #FFFFFF;
-}
-.form-text{
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 25px;
-	color: #FFFFFF;
-
-	margin-top: 70px;
 }
 
 .form{
 	background-color: #252736;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
-  	clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 100%);
-	height: 992px;
-}
-.form-text-container{
-	margin-top: -33px;
-	margin-bottom: 48px;
-	.form-text{
-		&:last-child{
-			margin-top: 18px;
+	clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 100%);
+  	height: 99rem;
+	@include tablet{
+		height: 97rem;
+	}
+	@include mobile{
+		height: auto;
+		clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+		padding-bottom: 6rem;
+	}
+	.container{
+		display: flex;
+		position: relative;
+		align-items: center;
+		padding: 0;
+		justify-content: space-between;
+		@include tablet{
+			gap: 5rem;
+		}
+		@include mobile{
+			display: grid;
+			gap: 3.5rem;
+		}
+		img{
+			object-fit: contain;
+			@include mobile{
+				grid-row: 1;
+			}
+		}
+		img.form-image-full{
+			width: 77.3rem;
+			height: 108rem;
+			@include tablet{
+				display: none;
+			}
+		}
+		img.form-image-tablet{
+			display: none;
+			width: 55.3rem;
+			height: 105rem;
+			margin-right: -6rem;
+			@include tablet{
+				display: inline;
+			}
+			@include mobile{
+				width: 100%;
+				height: 60rem;
+				margin: 0;
+			}
 		}
 	}
-}
-
-.input-standart{
-	width: 427px;
-	height: 60px;
-
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 30px;
-	color: #CCCCCC;
-}
-
-
-.input-textaerea{
-	width: 427px;
-	height: 156px;
-	resize: none;
-
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 30px;
-	color: #CCCCCC;
-}
-
-
-.form-submit{
-	font-family: Open Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 30px;
-	text-align: center;
-	color: #FFFFFF;
-
-	background: #2962FF;
-
-	padding: 13px 0;
-}
-
-.form-column-2{
-	position: relative;
-	left: -24px;
-	top: 68px;
-	z-index: 0;
+	&-wrapper{
+		max-width: 42.7rem;
+		width: 100%;
+		margin-left: 10rem;
+		@include tablet{
+			margin-left: 0;
+		}
+		@include tablet{
+			padding: 0 2rem;
+		}
+		.title{
+			margin-bottom: 4.4rem;
+			@include tablet{
+				margin-bottom: 4rme;
+			}
+		}
+		p{
+			font-weight: 300;
+			font-size: 1.8rem;
+			color: #FFFFFF;
+			margin-bottom: 2rem;
+		}
+		&-items{
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+			input{
+				height: 6rem;
+				width: 100%;
+				padding: 0 2rem;
+				font-size: 1.6rem;
+			}
+			textarea{
+				padding: 2rem;
+				height: 15.6rem;
+				width: 100%;
+				font-size: 1.6rem;
+			}
+			.btn{
+				margin: 0;
+				width: 100%;
+				@include tablet{
+					font-size: 2rem;
+					padding: 1.5rem;
+				}
+			}
+		}
+		&-items.home-form{
+			margin-top: 5rem;
+			@include tablet{
+				margin-top: 4rem;
+			}
+		}
+	}
 }

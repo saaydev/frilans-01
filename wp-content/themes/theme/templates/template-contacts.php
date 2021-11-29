@@ -15,7 +15,7 @@
       </svg>
 
       <span>
-        lunedì - venerdì dalle 09:00 <br>alle 20:00
+        lunedì - venerdì dalle 09:00 alle 20:00
       </span>
       </li>
       
@@ -55,7 +55,9 @@
  
 </div>
 <div class="contacts__row">
-      <div class="contacts__map" style="background-image:url('<?php echo IMG . "map.png"?>');"></div>
+      <div class="contacts__map full" style="background-image:url('<?= IMG . "map.png"?>');"></div>
+      <div class="contacts__map tablet" style="background-image:url('<?= IMG . "map-tablet.png"?>');"></div>
+      <div class="contacts__map mobile" style="background-image:url('<?= IMG . "map-mobile.png"?>');"></div>
     </div>
 <?php get_template_part("components/form"); ?>
 

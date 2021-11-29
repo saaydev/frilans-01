@@ -2,6 +2,10 @@
     &-top{
         position: relative;
         padding: 5.5rem 0;
+        @include mobile{
+            padding-top: 3rem;
+            padding-bottom: 5rem;
+        }
         h1{
             font-family: 'Libre';
             font-style: normal;
@@ -11,6 +15,9 @@
             text-transform: uppercase;
             color: #FFFFFF;
             max-width: 90rem;
+            @include mobile{
+                font-size: 3rem;
+            }
         }
     }
     .bg{
@@ -24,7 +31,15 @@
     }
     &-content{
         padding: 3rem 0;
-       
+        @include mobile{
+            padding-top: 0;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
         .date{
             font-family: Open Sans;
             font-style: normal;
@@ -53,12 +68,15 @@
     }
     &-news{
         margin-top: 7.7rem;
+        @include mobile{
+            margin-top: 6rem;
+            margin-bottom: 5.5rem;
+        }
         &-title{
             font-family: Libre Caslon Display;
             font-style: normal;
             font-weight: normal;
-            font-size: 30px;
-            line-height: 37px;
+            font-size: 3rem;
             letter-spacing: 0.04em;
             text-transform: uppercase;
             color: #FFFFFF;
@@ -68,6 +86,18 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 3rem;
+            @include tablet{
+                grid-template-columns: repeat(3, 1fr);
+                .news-item{
+                    &:nth-of-type(4){
+                        display: none;
+                    }
+                }
+            }
+            @include mobile{
+                grid-template-columns: 100%;
+                gap: 4rem;
+            }
             .news-item h2,span,p,a{
                 color: #FFFFFF !important;
             }

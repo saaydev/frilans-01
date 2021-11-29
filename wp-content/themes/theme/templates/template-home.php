@@ -16,7 +16,9 @@
 					Avvocato di lingua russa in Italia
 				</p>
 			</div>
-			<img src="<?= IMG . "header/title-bg.png" ?>" alt="">
+			<img src="<?= IMG . "header/title-bg.png" ?>" alt="" class="preview-img-full">
+			<img src="<?= IMG . "preview-mobile.png" ?>" alt="" class="preview-img-mobile">
+
 		</div>
 	</div>
 	<div class="home-about container">
@@ -70,84 +72,83 @@
 		</div>
 	</div>
 
-	<div class="wrapper">
+	<div class="home-review container">
 		<div class="review">
-			<div class="container">
-				<div class="review-container-title">
-					<h3 class="review-title">A proposito di me</h3>
-					<div class="reviews-title-info">
-						<div class="info-item">
-							<h3>350+</h3>
-							<p>Più di 350 clienti soddisfatti all'anno</p>
-						</div>
-						<div class="info-item">
-							<h3>1520+</h3>
-							<p>Più di 1520 ordini completati</p>
-						</div>
-						<div class="info-item">
-							<h3>1520+</h3>
-							<p>Più di 1520 ordini completati</p>
-						</div>
+			<div class="review-container-title">
+				<h3 class="review-title">A proposito di me</h3>
+				<div class="reviews-title-info">
+					<div class="info-item">
+						<h3>350+</h3>
+						<p>Più di 350 clienti soddisfatti all'anno</p>
+					</div>
+					<div class="info-item">
+						<h3>1520+</h3>
+						<p>Più di 1520 ordini completati</p>
+					</div>
+					<div class="info-item">
+						<h3>1520+</h3>
+						<p>Più di 1520 ordini completati</p>
 					</div>
 				</div>
-				<div class="reviews-container">
-					<div class="review-item">
-						<div class="stars">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						</div>
-						<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
-						<div class="author">
-							<div class="name">
-								<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
-								<p>Claudia Kogut</p>
-							</div>
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
-						</div>
+			</div>
+			<div class="reviews-container">
+				<div class="review-item">
+					<div class="stars">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
 					</div>
-					<div class="review-item">
-						<div class="stars">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+					<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
+					<div class="author">
+						<div class="name">
+							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
+							<p>Claudia Kogut</p>
 						</div>
-						<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
-						<div class="author">
-							<div class="name">
-								<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
-								<p>Claudia Kogut</p>
-							</div>
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
-						</div>
-					</div>
-					<div class="review-item">
-						<div class="stars">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						</div>
-						<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
-						<div class="author">
-							<div class="name">
-								<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
-								<p>Claudia Kogut</p>
-							</div>
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
-						</div>
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
 					</div>
 				</div>
-				<div class="btns-review">
-					<p class="btn1">Leggi tutte le recensioni</p>
-					<p class="btn2">Lascia un feedback</p>
+				<div class="review-item">
+					<div class="stars">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+					</div>
+					<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
+					<div class="author">
+						<div class="name">
+							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
+							<p>Claudia Kogut</p>
+						</div>
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
+					</div>
 				</div>
-				<div class="down-p">
+				<div class="review-item">
+					<div class="stars">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
+					</div>
+					<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
+					<div class="author">
+						<div class="name">
+							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
+							<p>Claudia Kogut</p>
+						</div>
+						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="btns-review">
+				<p class="btn1">Leggi tutte le recensioni</p>
+				<p class="btn2">Lascia un feedback</p>
+			</div>
+			<div class="down-p">
 				<p>Servizi di avvocati esperti</p>
 				<p>
 				Davide Poberezhsky ei suoi colleghi garantiscono un servizio di alto livello per clienti privati ​​e aziendali. Rispetto per le informazioni riservate Rispettiamo le informazioni personali e aziendali dei nostri clienti. Garantiamo nessuna perdita. Adottiamo le misure necessarie per proteggere i tuoi dati. Alti valori professionali Per noi fornire assistenza legale in Italia significa crescere costantemente, seguire i cambiamenti, valorizzare la nostra reputazione.</p>
@@ -157,11 +158,11 @@
 				<p>
 				Ogni servizio si basa sulla comprensione che la soluzione del problema dipende dall'attività, dalla carriera e dal comfort di vita del cliente. Pertanto, l'assistenza ai russi in Italia viene fornita con il coinvolgimento di tutti i mezzi legali possibili. Raggiungere un risultato positivo e lasciare il cliente soddisfatto è la cosa principale. La reputazione di un avvocato di successo si basa su questo.</p>
 				<p>Il compenso per i servizi di un avvocato è preso per un lavoro specifico: consultazione, fornitura di informazioni, preparazione di documenti o tutela di interessi. Davide ha clienti con cui collabora da molti anni: sono pronti a confermare la sua professionalità e obiettività. Di fronte a problemi legali? Non sai da dove iniziare a trasferirti in Italia? Stai pianificando un'attività in questo paese? Cerca servizi legali da un professionista e ti proteggerai da molti rischi.</p>
-				
-				</div>
 			</div>
 		</div>
+	</div>
 
+	<div class="home-gallary">
 		<div class="gallary">
 			<div class="container">
 				<h2 class="title text-center">Galleria</h2>
@@ -202,7 +203,6 @@
 
 	<?php get_template_part("components/form") ?>
 </div>
-
 <?php 
     get_footer(); 
 ?>

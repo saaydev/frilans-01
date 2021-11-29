@@ -1,7 +1,5 @@
 .contacts {
   width: 100%;
-  // .contacts__title
-
   &__title {
     font-family: 'Libre Caslon';
     font-style: normal;
@@ -13,20 +11,33 @@
     color: #252736;
     margin: 0 5rem 3.9rem 5rem;
   }
-
-  // .contacts__info
-
   &__info {
     margin-bottom: 4.3rem;
     display: flex;
+    @include tablet{
+      align-items: center;
+      gap: 5rem;
+    }
+    @include mobile{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 2rem;
+    }
     li{
       display: flex;
       margin-right: 7rem;
+      @include tablet{
+        margin-right: 0;
+        align-self: start;
+      }
       svg{
         width: 2rem;
         height: 2rem;
         margin-top: .5rem;
         margin-right: 2rem;
+        @include tablet{
+          margin-right: .5rem;
+        }
       }
       span{
         font-style: normal;
@@ -37,8 +48,6 @@
       }
     }
   }
-
-  // .contacts__row
 
   &__row {
     width: 100%;
@@ -57,5 +66,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: -15rem;
+    @include tablet{
+      max-width: 100%;
+      width: 100%;
+    }
+    @include mobile{
+      height: 40rem;
+    }
+  }
+  &__map.full{
+    @include tablet{
+      display: none;
+    }
+  }
+  &__map.tablet{
+    display: none;
+    @include tablet{
+      display: block;
+    }
+    @include mobile{
+      display: none;
+    }
+  }
+  &__map.mobile{
+    display: none;
+    @include mobile{
+      display: block;
+    }
   }
 }

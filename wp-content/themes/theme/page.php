@@ -1,6 +1,6 @@
 <?php
-    global $body_class;
-    $body_class = "black";
+    global $is_black;
+    $is_black = true;
     get_header();
 ?>
     <div class="page container">

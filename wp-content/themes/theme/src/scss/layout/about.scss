@@ -8,23 +8,49 @@
             letter-spacing: 0.04em;
             text-transform: uppercase;
             color: #FFFFFF;
+            @include mobile{
+                font-size: 3rem;
+            }
         }
         &-grid{
             display: grid;
             grid-template-columns: 54rem 1fr;
             gap: 15rem;
+            @include tablet{
+                grid-template-columns: 36.7rem 1fr;
+                gap: 3rem;
+            }
+            @include mobile{
+                grid-template-columns: 100%;
+                gap: 0;
+            }
             img{
                 width: 100%;
                 height: 59rem;
                 object-fit: contain;
+                @include mobile{
+                    height: 40rem;
+                }
             }
             .content{
                 margin-top: 4rem;
+                @include mobile{
+                    margin-top: 3.5rem;
+                }
             }
         }
     }
     &-story{
         text-align: center;
+        @include mobile{
+            overflow: auto;
+        }
+        h2{
+            @include tablet{
+                margin-bottom: 3.6rem;
+                text-align: left;
+            }
+        }
         h2,h5, p{
             color: #FFFFFF !important;
         }
@@ -37,6 +63,10 @@
         margin-top: 12rem;
         position: relative;
         padding-bottom: 15rem;
+        @include mobile{
+            margin-top: 8rem;
+            padding-bottom: 10rem;
+        }
         &-bg{
             position: absolute;
             left: 0;
@@ -48,6 +78,10 @@
             overflow: hidden;
             width: 120%;
             margin-left: -10%;
+            @include mobile{
+                width: 130%;
+                margin-left: -15%;
+            }
             img{
                 width: 100%;
                 object-fit: cover;
@@ -61,6 +95,14 @@
                 display: grid;
                 grid-template-columns: 65rem 1fr;
                 gap: 14.6rem;
+                @include tablet{
+                    grid-template-columns: 2fr 1fr;
+                    gap: 3.5rem;
+                }
+                @include mobile{
+                    grid-template-columns: 100%;
+                    gap: 4rem;
+                }
                 .content{
                     color: #252736;
                     
@@ -71,12 +113,18 @@
                         font-size: 2.2rem;
                         color: #252736;
                         margin-bottom: 4rem;
+                        @include tablet{
+                            font-size: 2rem;
+                        }
                     }
                     p{
                         margin-bottom: 1.8rem;
                         display: flex;
                         align-items: center;
                         gap: 1rem;
+                        @include tablet{
+                            font-size: 1.6rem;
+                        }
                     }
                 }
             }
@@ -90,6 +138,10 @@
                 color: #252736;
                 max-width: 65rem;
                 margin-bottom: 2.4rem;
+                @include tablet{
+                    font-size: 2.4rem;
+                    max-width: 44.7rem;
+                }
             }
         }
     }
@@ -99,6 +151,10 @@
         position: relative;
         padding: 9rem 0;
         margin-top: -8rem;
+        @include tablet{
+            padding-top: 5.6rem;
+            padding-bottom: 3.6rem;
+        }
         h2{
             color: #FFFFFF;
             font-family: Libre Caslon Display;
@@ -110,15 +166,28 @@
             text-transform: uppercase;
             color: #FFFFFF;
             margin-bottom: 5rem;
+            @include mobile{
+                margin-bottom: 4rem;
+            }
         }
         &-items{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
+            @include mobile{
+                grid-template-columns: 100%;
+                gap: 2rem;
+            }
             img{
                 object-fit: cover;
                 width: 100%;
                 height: 58rem; 
+                @include tablet{
+                    height: 39.5rem;
+                }
+                @include mobile{
+                    height: 55rem;
+                }
             }
         }
     }
@@ -126,6 +195,9 @@
         position: relative;
         padding: 10rem 0;
         margin-top: 5rem;
+        @include mobile{
+            padding: 5.6rem 0;
+        }
         &-bg{
             background: #FFFFFF;
             position: absolute;
@@ -136,6 +208,10 @@
             height: 100%;
             z-index: 2;
             transform: rotate(5deg);
+            @include mobile{
+                width: 130%;
+                margin-left: -15%;
+            }
         }
         &-content{
             position: relative;
@@ -150,6 +226,10 @@
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
                 gap: 3rem;
+                @include mobile{
+                    grid-template-columns: 100%;
+                    gap: 4rem;
+                }
             }
         }
     }

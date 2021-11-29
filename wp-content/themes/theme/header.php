@@ -8,18 +8,31 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <?php wp_head() ?>
 </head>
-<?php
-    global $body_class;
-    $class = $body_class;
+
+<?php 
+    global $is_black;
+
+    switch(true){
+        case is_page_template("templates/template-gallery.php"): $class = "black"; break;
+        case is_page_template("templates/template-contacts.php"): $class = "black"; break;
+        case is_archive("news"): $class = "black"; break;
+    }
+    switch(true){
+        case is_single(): $class_body = "black"; break;
+        case is_page_template("templates/template-about.php"): $class_body = "black"; break;
+        case $is_black: $class_body = "black"; break;
+    }
 ?>
-<body class="<?= $class ?>">
+<?php 
+?>
+<body class="<?= $class_body ?>">
 <?php if(!is_404()) : ?>
 
-<header class="header <?= $class ?: "white" ?> fixed">
-    <div class="header-main container">
+<header class="header container <?= $class ?: "white" ?> <?= is_front_page() ? "absolute" : "" ?>">
+    <div class="header-main">
         <a href="<?= home_url() ?>">
-            <img src="<?= get_template_directory_uri() . "/assets/img/logo-main.png" ?>" alt="" class="header-main-logo-white white">
-            <img src="<?= get_template_directory_uri() . "/assets/img/logo-black.png" ?>" alt="" class="header-main-logo-black black">
+            <img src="<?= IMG . "logo-main.png" ?>" alt="" class="header-main-logo-white white">
+            <img src="<?= IMG . "logo-black.png" ?>" alt="" class="header-main-logo-black black">
         </a>
 
         <div class="header-main-items">
@@ -67,6 +80,9 @@
         </div>
         
         <button class="btn no-marg modal_form_open">Сontatto</button>
+        <button class="open-menu">
+            <img src="<?= IMG . "menu-open-mobile.png" ?>" alt="">
+        </button>
 
     </div>
 </header>

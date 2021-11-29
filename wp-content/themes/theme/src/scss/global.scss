@@ -13,6 +13,9 @@ html {
     @media only screen and (max-width: $grid-breakpoints-lg){
         font-size: 0.62vw;
     }
+    @include tablet{
+        font-size: 0.97vw;
+    }
     @media only screen and (max-width: $grid-breakpoints-md){
         font-size: 2.6vw;
     }
@@ -32,6 +35,9 @@ body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
     overflow-x: hidden;
+    @include mobile{
+        font-size: 1.6rem;
+    }
 }
 body.black{
     background: #252736;
@@ -41,6 +47,12 @@ body.black{
     max-width: 134rem;
     margin: auto;
     width: 100%;
+    @include tablet{
+		max-width: 92.4rem;
+	}
+    @include mobile{
+        padding: 0 1.5rem;
+    }
 }
 .content{
     color: #FFFFFF;
@@ -70,6 +82,9 @@ body.black{
     margin: 2.4rem 0;
     width: max-content;
     height: max-content;
+    @include tablet{
+        padding: 1.5rem 4rem;
+    }
 }
 .btn.no-marg{
     margin: 0;
@@ -118,6 +133,13 @@ body.black{
 
 .page{
     padding: 10rem 0;
+    @include tablet{
+        padding-top: 7rem;
+    }
+    @include mobile{
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+    }
     h1{
         margin-bottom: 3.3rem;
         font-family: Libre Caslon Display;
