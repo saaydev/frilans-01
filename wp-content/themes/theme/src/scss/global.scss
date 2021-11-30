@@ -16,7 +16,7 @@ html {
     @include tablet{
         font-size: 0.97vw;
     }
-    @media only screen and (max-width: $grid-breakpoints-md){
+    @include mobile{
         font-size: 2.6vw;
     }
 }
