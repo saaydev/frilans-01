@@ -11,7 +11,8 @@
 
 <?php 
     global $is_black;
-
+    $class_body = "";
+    $class = "";
     switch(true){
         case is_page_template("templates/template-gallery.php"): $class = "black"; break;
         case is_page_template("templates/template-contacts.php"): $class = "black"; break;

@@ -1,10 +1,5 @@
-.wrapper{
-	width: 1920px;
-	overflow: hidden;
-	margin: 0;
-}
-
 .home{
+	overflow-x: hidden;
 	&-preview{
 		height: 93rem;
 		background: #252736;
