@@ -100,11 +100,15 @@ body.black {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  transition: 0.2s;
 }
 @media (max-width: 1024px) {
   .btn {
     padding: 1.5rem 4rem;
   }
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 
 .btn.no-marg {
@@ -302,11 +306,32 @@ body.black .page h1 {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  transition: 0.3s;
+  position: relative;
+}
+.header-main-items ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: #2962FF;
+  transition: 0.2s;
+  visibility: hidden;
+  transform: scaleX(0);
+}
+.header-main-items ul li a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
 }
 .header-main-items ul li a img {
   display: none;
   width: 2.5rem;
   height: 2.5rem;
+}
+.header-main-items ul li.tel a::after {
+  display: none;
 }
 @media (max-width: 1024px) {
   .header-main .btn {
@@ -386,6 +411,27 @@ body.black .page h1 {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 2.5rem;
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+}
+.footer-item a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: #2962FF;
+  transition: 0.2s;
+  visibility: hidden;
+  transform: scaleX(0);
+}
+.footer-item a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
 }
 .footer-item-content {
   display: grid;
@@ -886,6 +932,16 @@ body.black .page h1 {
     gap: 4rem;
   }
 }
+.news-item {
+  padding-top: 2rem;
+  padding: 5rem 1rem 5rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+.news-item:hover {
+  transform: scale(0.99);
+  background: rgba(128, 128, 128, 0.1);
+}
 .news-item img {
   width: 100%;
   height: 22.6rem;
@@ -966,6 +1022,10 @@ body.black .page h1 {
   height: -moz-max-content;
   height: max-content;
   color: #252736;
+  transition: 0.3s;
+}
+.term:hover {
+  transform: scale(1.05);
 }
 
 .articolo-top {
@@ -2089,6 +2149,10 @@ body.black .page h1 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.3s;
+}
+.gallary .gallary-container img:hover {
+  transform: scale(1.03);
 }
 .gallary .gallary-container img:nth-of-type(1) {
   grid-area: _1;
@@ -2285,6 +2349,10 @@ body.black .page h1 {
   height: 59rem;
   -o-object-fit: contain;
      object-fit: contain;
+  transition: 0.3s;
+}
+.about-me-top-grid img:hover {
+  transform: scale(1.02);
 }
 @media (max-width: 768px) {
   .about-me-top-grid img {
@@ -2464,6 +2532,10 @@ body.black .page h1 {
      object-fit: cover;
   width: 100%;
   height: 58rem;
+  transition: 0.3s;
+}
+.about-me-cert-items img:hover {
+  transform: scale(1.02);
 }
 @media (max-width: 1024px) {
   .about-me-cert-items img {

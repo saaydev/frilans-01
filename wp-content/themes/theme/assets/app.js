@@ -1108,8 +1108,8 @@ var Modal = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\openserver\domains\frilans01.loc\wp-content\themes\theme\src\js\app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! C:\openserver\domains\frilans01.loc\wp-content\themes\theme\src\scss\app.scss */"./src/scss/app.scss");
+__webpack_require__(/*! C:\OpenServer\domains\frilans01.loc\wp-content\themes\theme\src\js\app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! C:\OpenServer\domains\frilans01.loc\wp-content\themes\theme\src\scss\app.scss */"./src/scss/app.scss");
 
 
 /***/ })

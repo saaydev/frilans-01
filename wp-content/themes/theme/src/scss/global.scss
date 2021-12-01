@@ -4,6 +4,7 @@ $grid-breakpoints-lg: 1280px;
 $grid-breakpoints-md: 768px;
 $breakpoints-full-hd: 1980px;
 $colorm: #252736;
+$blue: #2962FF;
 
 html {
     font-size: 0.39vw;
@@ -83,8 +84,12 @@ body.black{
     margin: 2.4rem 0;
     width: max-content;
     height: max-content;
+    transition: .2s;
     @include tablet{
         padding: 1.5rem 4rem;
+    }
+    &:hover{
+        transform: scale(1.05);
     }
 }
 .btn.no-marg{
