@@ -92,72 +92,42 @@
 				</div>
 			</div>
 			<div class="reviews-container">
-				<div class="review-item">
-					<div class="stars">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-					</div>
-					<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
-					<div class="author">
-						<div class="name">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
-							<p>Claudia Kogut</p>
+				<?php if(CFS()->get("reviews")) foreach(CFS()->get("reviews") as $item) : ?>
+
+					<div class="review-item">
+
+						<div class="stars">
+							<?php if($item["stars"]) for($i = 0; $i < (int) $item["stars"]; $i++) : ?>
+								<img src="<?= IMG . "/reviews/star.png" ?>" alt="">
+							<?php endfor ?>
 						</div>
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
-					</div>
-				</div>
-				<div class="review-item">
-					<div class="stars">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-					</div>
-					<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
-					<div class="author">
-						<div class="name">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
-							<p>Claudia Kogut</p>
+
+						<p class="review-item-text"><?= $item["text"] ?></p>
+						<div class="author">
+							<div class="name">
+								<?php
+									printf('<img src="%s" alt="">',
+										$item["image"] ?: IMG . "/reviews/photo-author.png"
+									)
+								?>
+								<p><?= $item["name"] ?></p>
+							</div>
+							<?php
+								printf('<img src="%s" alt="">',
+									$item["image2"] ?: IMG . "/reviews/sign.png"
+								)
+							?>
 						</div>
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
 					</div>
-				</div>
-				<div class="review-item">
-					<div class="stars">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/star.png" alt="">
-					</div>
-					<p class="review-item-text">Ci siamo avvicinati a Davide su consiglio di un amico che consigliava in materia di immigrazione a Milano.</p>
-					<div class="author">
-						<div class="name">
-							<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/photo-author.png" alt="">
-							<p>Claudia Kogut</p>
-						</div>
-						<img src="<?= get_template_directory_uri() . "/assets/img/" ?>reviews/sign.png" alt="">
-					</div>
-				</div>
+
+				<?php endforeach ?>
 			</div>
 			<div class="btns-review">
 				<p class="btn1">Leggi tutte le recensioni</p>
 				<p class="btn2">Lascia un feedback</p>
 			</div>
 			<div class="down-p">
-				<p>Servizi di avvocati esperti</p>
-				<p>
-				Davide Poberezhsky ei suoi colleghi garantiscono un servizio di alto livello per clienti privati ​​e aziendali. Rispetto per le informazioni riservate Rispettiamo le informazioni personali e aziendali dei nostri clienti. Garantiamo nessuna perdita. Adottiamo le misure necessarie per proteggere i tuoi dati. Alti valori professionali Per noi fornire assistenza legale in Italia significa crescere costantemente, seguire i cambiamenti, valorizzare la nostra reputazione.</p>
-				<p>
-				Raggiungere risultati efficaci Nessuna azione formulata. Un approccio individuale ad ogni cliente e ottenere il massimo dalla situazione per lui.  Il tuo avvocato personale in Italia
-				David Poberezhsky ha molti anni di esperienza e fornisce supporto legale ad alto livello professionale. Assicurati di lavorare con uno specialista che sa come ottenere risultati elevati.</p>
-				<p>
-				Ogni servizio si basa sulla comprensione che la soluzione del problema dipende dall'attività, dalla carriera e dal comfort di vita del cliente. Pertanto, l'assistenza ai russi in Italia viene fornita con il coinvolgimento di tutti i mezzi legali possibili. Raggiungere un risultato positivo e lasciare il cliente soddisfatto è la cosa principale. La reputazione di un avvocato di successo si basa su questo.</p>
-				<p>Il compenso per i servizi di un avvocato è preso per un lavoro specifico: consultazione, fornitura di informazioni, preparazione di documenti o tutela di interessi. Davide ha clienti con cui collabora da molti anni: sono pronti a confermare la sua professionalità e obiettività. Di fronte a problemi legali? Non sai da dove iniziare a trasferirti in Italia? Stai pianificando un'attività in questo paese? Cerca servizi legali da un professionista e ti proteggerai da molti rischi.</p>
+				<?= CFS()->get("reviews-content") ?>
 			</div>
 		</div>
 	</div>

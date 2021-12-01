@@ -8,7 +8,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 11;
     @include mobile{
         padding: 1.5rem;
     }
@@ -158,6 +158,137 @@
                 height: 2.5rem;
             }
         }
+    }
+    &-menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: rgba($color: #000000, $alpha: .85);
+        padding: 4rem 5rem 4rem 3.2rem;
+        z-index: 10;
+        height: 100vh;
+        width: 36.8rem;
+        display: grid;
+        grid-template-rows: 1fr max-content;
+        gap: 2.5rem;
+        visibility: hidden;
+        @include mobile{
+            width: 100vw;
+            padding: 4.1rem 1.5rem 3rem;
+        }
+        img.black{
+            display: none;
+        }
+        ul.menu{
+            margin-top: 8rem;
+            display: grid;
+            grid-auto-rows: max-content;
+            gap: 2rem;
+            li{
+                text-align: end;
+                @include mobile{
+                    text-align: center;
+                }
+                a{
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    @include mobile{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            li.tel{
+                display: none;
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .current-menu-item a{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -.5rem;
+                    height: 4px;
+                    width: 100%;
+                    left: 0;
+                    background: #2962FF;
+                }
+            }
+            ul.sub-menu{
+                margin-top: 2rem;
+                display: grid;
+                grid-auto-rows: max-content;
+                gap: 1.5rem;
+                display: none;
+                li a{
+                    font-size: 1.6rem;
+                    font-weight: normal;
+                    @include mobile{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            ul.sub-menu.open{
+                display: grid;
+            }
+        }
+        button.close{
+            position: absolute;
+            right: 5rem;
+            top: 4.2rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: none;
+            @include mobile{
+                right: 1.5rem;
+            }
+            svg{
+                width: 100%;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                bottom: -2.2rem;
+                width: 28.6rem;
+                right: 0rem;
+                background: #fff;
+                height: 1px;
+                @include mobile{
+                    width: 35.5rem;
+                }
+                
+            }
+        }
+        .btn{
+            justify-self: end;
+            margin: 0;
+            width: 17.4rem;
+            height: 5rem;
+            @include mobile{
+                justify-self: center;
+            }
+        }
+        .tel{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-weight: 600;
+            font-size: 1.8rem;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            gap: .8rem;
+            @include mobile{
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    }
+    &-menu.show{
+        visibility: visible;
     }
 }
 .modal.show{

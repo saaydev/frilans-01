@@ -104,3 +104,23 @@
         </div>
     </div>
 </div>
+
+<div class="modal-menu" id="modal_menu">
+    <?php
+        wp_nav_menu("header");
+    ?>
+    <button class="close">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="22.917" width="32.409" height="2.94627" transform="rotate(-45 0 22.917)" fill="white"/>
+            <rect x="2.08301" width="32.409" height="2.94627" transform="rotate(45 2.08301 0)" fill="white"/>
+        </svg>
+    </button>
+
+    <a href="tel:<?= get_theme_mod("tel") ?>" class="tel">
+        <img src="<?= IMG . "whatsapp-black.png" ?>" alt="" class="black">
+        <img src="<?= IMG . "whatsapp-white.png" ?>" alt="" class="white">
+        <?= get_theme_mod("tel") ?>
+    </a>
+
+    <button class="btn modal_form_open">Сontatto</button>
+</div>

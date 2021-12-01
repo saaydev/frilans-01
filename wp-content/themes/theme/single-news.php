@@ -56,7 +56,7 @@
                 ]);
                 while(have_posts()){
                     the_post();
-                    get_template_part("components/news", "item",);
+                    get_template_part("components/news", "item");
                 }
                 wp_reset_query();
             ?>

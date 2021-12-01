@@ -1,5 +1,5 @@
 class Modal{
-    constructor({ open, close, modal }){
+    constructor({ open, close = ".close", modal }){
         this.open = open
         this.close = close
         this.modal = modal
@@ -10,14 +10,15 @@ class Modal{
             element.addEventListener("click", (e)=>{
                 e.preventDefault()
                 this.modal.classList.add("show")
-                document.body.style.overflow = "hidden"
             })
         })
-        this.close.addEventListener("click", (e)=>{
-            e.preventDefault()
-            document.body.style.overflow = "visible"
-            this.modal.classList.remove("show")
-        })
+        this.close = this.modal.querySelector(this.close)
+        if(this.close){
+            this.close.addEventListener("click", (e)=>{
+                e.preventDefault()
+                this.modal.classList.remove("show")
+            })
+        }
     }
 }
 export default Modal

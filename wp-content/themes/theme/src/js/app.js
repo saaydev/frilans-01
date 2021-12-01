@@ -18,18 +18,28 @@ if(document.querySelector(".gallery-show")){
     })
 }
 
-const formModal = new Modal({
+new Modal({
     open: document.querySelectorAll(".modal_form_open"),
-    modal: document.querySelector("#modal_form"),
-    close: document.querySelector("#modal_form .close")
+    modal: document.getElementById("modal_form")
 })
-
-const form = new Form({
+new Modal({
+    open: document.querySelectorAll(".open_menu"),
+    modal: document.getElementById("modal_menu")
+})
+new Form({
     form: document.getElementById("formhome")
 })
-const formfooter = new Form({
+new Form({
     form: document.getElementById("formfooter")
 })
-const formmodal = new Form({
+new Form({
     form: document.getElementById("formmodal")
+})
+
+// Open sub menu by click
+document.querySelectorAll(".menu-item-has-children").forEach(element => {
+    element.addEventListener("click", () => {
+        element.querySelector("ul.sub-menu").classList.toggle("open")
+        element.classList.toggle("current")
+    })
 })
