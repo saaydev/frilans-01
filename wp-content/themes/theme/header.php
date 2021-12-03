@@ -66,7 +66,7 @@
                 <?php
                    
                     $menu_items = wp_get_nav_menu_items("header");
-                    $current_url = get_page_link(get_the_ID());
+                    $current_url = get_page_link(get_the_ID() ?: get_queried_object_id());
                     foreach($menu_items as $item){
                         if(!$item->menu_item_parent){
                             printf('<li class="%s"><a href="%s">%s</a></li>',
