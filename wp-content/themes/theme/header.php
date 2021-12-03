@@ -61,8 +61,10 @@
                 </div>
                 <div class="header-main-items-top-item">Russian / Italian</div>
             </div>
+            <?php the_ID(); ?>
             <ul>
                 <?php
+                   
                     $menu_items = wp_get_nav_menu_items("header");
                     $current_url = get_page_link(get_the_ID());
                     foreach($menu_items as $item){
@@ -73,7 +75,6 @@
                                 $item->title,
                             );
                         }
-                       
                     }
                 ?>
                 <li class="tel">
