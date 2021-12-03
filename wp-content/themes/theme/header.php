@@ -61,7 +61,6 @@
                 </div>
                 <div class="header-main-items-top-item">Russian / Italian</div>
             </div>
-            <?php the_ID(); ?>
             <ul>
                 <?php
                    
