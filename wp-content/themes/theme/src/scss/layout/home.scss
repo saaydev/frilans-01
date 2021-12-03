@@ -4,6 +4,7 @@
 		height: 93rem;
 		background: #252736;
 		backdrop-filter: blur(9px);
+		position: relative;
 		@include mobile{
 			height: auto;
 		}
@@ -15,7 +16,6 @@
 			align-items: center;
 			justify-content: center;
 			height: 100%;
-			position: relative;
 			@include tablet{
 				align-items: start;
 			}

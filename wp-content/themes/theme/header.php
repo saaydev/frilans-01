@@ -50,7 +50,7 @@
                     <img src="<?= IMG . "icon-time-white.png" ?>" alt="" class="white">
                     <img src="<?= IMG . "icon-time-black.png" ?>" alt="" class="black">
 
-                    lunedì - venerdì dalle 09:00 alle 20:00
+                    <?= get_theme_mod("time") ?>
                 </div>
                 <div class="header-main-items-top-item">
 

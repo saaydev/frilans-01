@@ -1,2 +1,3 @@
-<?php get_header(); ?>
-<?php get_footer(); ?>
+<?php
+    if(is_tax("news_cat")) get_template_part("archive-news");
+?>

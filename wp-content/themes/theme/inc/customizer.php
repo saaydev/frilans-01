@@ -13,6 +13,12 @@ add_action('customize_register', function(WP_Customize_Manager $wp_customize){
         "Телефон"   => "tel",
         "E-mail"    => "email",
         "Адрес"     => "address",
+        "Время работы" => "time",
+        "Instagram" => "instagram",
+        "TikTok"    => "tiktok",
+        "Linkedin"    => "linkedin",
+        "Telegram"  => "telegram",
+        "Youtube"   => "youtube",
     ];
     foreach($items as $key => $item){
 

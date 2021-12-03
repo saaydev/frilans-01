@@ -1,5 +1,6 @@
 import Form from "./form"
 import Modal from "./modal"
+import Pagination from "./pagination"
 
 if(document.querySelector(".gallery-show")){
     document.querySelector(".gallery-show").addEventListener("click", (e)=>{
@@ -13,27 +14,30 @@ if(document.querySelector(".gallery-show")){
                 element.style.display = "block"
             })
         }
-     
         e.target.parentElement.remove()
     })
 }
 
 new Modal({
     open: document.querySelectorAll(".modal_form_open"),
-    modal: document.getElementById("modal_form")
+    modal: document.getElementById("modal_form"),
 })
 new Modal({
     open: document.querySelectorAll(".open_menu"),
-    modal: document.getElementById("modal_menu")
+    modal: document.getElementById("modal_menu"),
 })
 new Form({
-    form: document.getElementById("formhome")
+    form: document.getElementById("formhome"),
 })
 new Form({
-    form: document.getElementById("formfooter")
+    form: document.getElementById("formfooter"),
 })
 new Form({
-    form: document.getElementById("formmodal")
+    form: document.getElementById("formmodal"),
+})
+new Pagination({
+    btn: document.querySelector(".pagination_news"),
+    wrapper: document.querySelector(".news"),
 })
 
 // Open sub menu by click

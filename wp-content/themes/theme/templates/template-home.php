@@ -23,7 +23,7 @@
 	</div>
 	<div class="home-about container">
 		<div class="line"></div>
-		<img src="<?= get_template_directory_uri() . "/assets/img/" ?>about/about-main.png" alt="" class="about-img">
+		<img src="<?= get_template_directory_uri() . "/assets/img/about/about-main.png" ?>" alt="" class="about-img">
 		<div class="content black">
 			<h2>A proposito di me</h2>
 			L’avvocato Davide è uno dei pochi avvocati ufficiali autorizzati in Italia bilingue Italiano e Russo. È specializzato in contenzioso e risoluzione alternativa delle controversie, immigrazione, diritto societario e fiscale, questioni immobiliari e diritto di famiglia.
